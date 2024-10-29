@@ -25,9 +25,9 @@ ColorModel (Bits 24-31 are alpha, 16-23 are red, 8-15 are green, 0-7 are blue). 
 cs can be left as null, in which case the image will be drawn in greyscale.
 
 StartFunction is supposed to provide random *continuous* input. The rate at which colors are cycled through in the 
-image is positively correlated with how large the values a StartFunction returns are. For example, replacing return 
-res with return 2.0f*res in sf.calculate() makes the image more sharply contrasting. It also has a mechanism makeNew 
-to be randomized/refreshed with an integer seed but this function can be left empty with no consequence. 
+image is affected by how rapidly a StartFunction varies. For example, replacing return res with return 2.0f*res in 
+sf.calculate() makes the image more sharply contrasting. It also has a mechanism makeNew to be randomized/refreshed 
+with an integer seed but this function can be left empty with no consequence. 
 
 The first four arguments to Autostereogram() should obviously be positive and an IllegalArgumentException is thrown 
 if any of them are not.
